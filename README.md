@@ -19,16 +19,16 @@
 
 ## Resultados
 - Paso 1
-![Alt text](FormularioAngularBootstrap/reto-form-angular/src/assets/Paso1.png?raw=true "Paso1")
+![ScreenShot](FormularioAngularBootstrap/reto-form-angular/src/assets/Paso1.png)
 
 - Paso 2
-![Alt text](FormularioAngularBootstrap/reto-form-angular/src/assets/Paso2.png?raw=true "Paso2")
+![ScreenShot](FormularioAngularBootstrap/reto-form-angular/src/assets/Paso2.png)
 
 - Paso 3
-![Alt text](FormularioAngularBootstrap/reto-form-angular/src/assets/Paso3.png?raw=true "Paso3")
+![ScreenShot](FormularioAngularBootstrap/reto-form-angular/src/assets/Paso3.png)
 
 - Fin
-![Alt text](FormularioAngularBootstrap/reto-form-angular/src/assets/Fin.png?raw=true "Fin")
+![ScreenShot](FormularioAngularBootstrap/reto-form-angular/src/assets/Fin.png)
 
 <p aling="center">
 <a>
