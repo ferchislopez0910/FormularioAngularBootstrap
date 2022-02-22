@@ -1,0 +1,29 @@
+<div class="container"  *ngIf="!formComplete">
+  <app-header></app-header>
+  <aw-wizard>
+    <aw-wizard-step stepTitle="Paso 1">
+
+      <app-paso1 (sendDataPaso1Next)="clicNextPaso1($event)"></app-paso1>
+
+    </aw-wizard-step>
+    <aw-wizard-step stepTitle="Paso 2">
+
+      <app-paso2 (sendDataPaso2Next)="clicNextPaso2($event)"></app-paso2>
+
+    </aw-wizard-step>
+    <aw-wizard-step stepTitle="Paso 3">
+
+      <app-paso3 (sendDataPaso3Next)="clicNextPaso3($event)"></app-paso3>
+
+    </aw-wizard-step>
+  </aw-wizard>
+</div>
+
+<div *ngIf="formComplete" style="">
+  <div class="alert alert-success" role="alert">
+    <h4 class="alert-heading">Registro satisfactorio!</h4>
+    <p>El registro OK.</p>
+    <hr>
+    <p class="mb-0"><a class="alert-link" (click)="recargarForm()">Registro nuevo.</a></p>
+  </div>
+</div>

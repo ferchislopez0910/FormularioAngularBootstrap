@@ -1,0 +1,23 @@
+<div style="text-align: center; color:red" *ngIf="formValidate == false"><span>Faltan campos por diligencias</span></div>
+<form class="row g-2" #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+  <div class="input-group col-12">
+    <input type="text" class="form-control" placeholder="Dirección residencia" id="inputDireccion" aria-label="Dirección residencia" name="inputDireccion" ngModel required />
+  </div>
+  <div class="input-group col-12">
+    <input type="text" class="form-control" placeholder="Código postal" id="inputCodigoPostar" aria-label="Código postal" name="inputCodigoPostar" ngModel required />
+  </div>
+
+
+  <div class="col-md-12">
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <button type="button" class="btn btn-secondary" awPreviousStep>
+          Atrás
+        </button>
+        <button type="submit" class="btn btn-success">
+          Finalizar
+        </button>
+      </div>
+    </nav>
+  </div>
+</form>

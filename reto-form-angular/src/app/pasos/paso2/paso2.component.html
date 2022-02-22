@@ -1,0 +1,32 @@
+<div style="text-align: center; color:red" *ngIf="formValidate == false"><span>Faltan campos por diligencias</span></div>
+<form class="row g-3" #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+  <div class="input-group col-12">
+    <input type="email" class="form-control" placeholder="Correo electrónico" id="inputCorreo" aria-describedby="emailHelp" name="inputCorreo" ngModel required />
+  </div>
+  <div class="input-group col-md-6">
+    <input type="password" placeholder="Contraseña" class="form-control" id="inputContrasena" name="inputContrasena" ngModel required />
+  </div>
+  <div class="input-group col-md-6">
+    <input type="password" placeholder="Confirmar contraseña" class="form-control" id="inputContrasena2" name="inputContrasena2" ngModel required />
+  </div>
+  <div class="input-group col-12">
+    <input type="text" placeholder="Número teléfono" class="form-control" id="inpuNumTelefono" name="inpuNumTelefono" ngModel required />
+  </div>
+  <div class="input-group col-12">
+    <input type="text" placeholder="Número celular" class="form-control" id="inpuNumCelular" name="inpuNumCelular" ngModel required />
+  </div>
+
+  <div class="col-md-12">
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <button type="button" class="btn btn-secondary" awPreviousStep>
+          Atrás
+        </button>
+        <button type="submit" class="btn btn-primary">
+          Siguiente
+        </button>
+      </div>
+    </nav>
+  </div>
+
+</form>

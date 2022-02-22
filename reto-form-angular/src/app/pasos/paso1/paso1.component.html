@@ -1,0 +1,112 @@
+<div style="text-align: center; color:red" *ngIf="formValidate == false"><span>Faltan campos por diligencias</span></div>
+<form class="row g-3" #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+  <div class="input-group col-md-6">
+    <div class="input-group-prepend">
+      <label class="input-group-text" for="inputGroupSelect01">Seleccione el pais</label>
+    </div>
+    <select class="custom-select"  name="inputPais" required (ngModel)="inputPais">
+      <option value="" selected></option>
+      <option *ngFor="let pais of paises" [value]="pais.nombre">{{pais.nombre}}</option>
+    </select>
+  </div>
+  <div class="input-group col-md-6">
+    <div class="input-group-prepend">
+      <label class="input-group-text" for="inputGroupSelect02">Seleccione el genero</label>
+    </div>
+    <select class="custom-select" id="inputGenero" name="inputGenero" ngModel required>
+      <option value="" selected></option>
+      <option value="Masculino">Masculino</option>
+      <option value="Femenino">Femenino</option>
+    </select>
+  </div>
+  <div class="col-md-6">
+    <input type="text" class="form-control" placeholder="Nombre" id="inputNombre" name="inputNombre" ngModel required />
+  </div>
+  <div class="col-md-6">
+    <input type="text" class="form-control" placeholder="Apellido" id="inputApellido" name="inputApellido" ngModel required />
+  </div>
+
+  <div class="col-md-4">
+    <label for="inputFechaNac" class="form-label">Fecha nacimiento</label>
+    <input
+      type="date"
+      data-date-format="yyyy-mm-dd"
+      id="inputFechaNac"
+      name="inputFechaNac"
+      value="1986-09-10"
+      required
+      ngModel
+    />
+  </div>
+  <div class="input-group col-md-4">
+    <div class="input-group-prepend">
+      <label class="input-group-text" for="inputGroupSelect03">Tipo de documento</label>
+    </div>
+    <select class="custom-select" id="inputTipoDoc"  name="inputTipoDoc" required ngModel>
+      <option value="" selected></option>
+      <option value="Cédula de ciudadanía">Cédula de ciudadanía</option>
+      <option value="Pasaporte">Pasaporte</option>
+      <option value="Cédula de extranjería">Cédula de extranjería</option>
+    </select>
+  </div>
+  <div class="col-md-4">
+    <input type="number" pattern=".{5,}"class="form-control" placeholder="Número de documento" id="inputNumeroDoc" name="inputNumeroDoc" ngModel required/>
+  </div>
+  <div class="col-12">
+    <div class="input-group">
+      <input
+        type="file"
+        class="form-control"
+        id="inputGroupFotoDocumentoFrente"
+        aria-describedby="inputGroupFotoDocumentoFrente"
+        aria-label="Upload"
+        accept=".png, .PNG"
+        required
+      />
+      <button
+        class="btn btn-outline-secondary"
+        type="button"
+        id="inputGroupFotoDocumentoFrente"
+      >
+        Subir
+      </button>
+    </div>
+  </div>
+  <div class="col-12">
+    <div class="input-group">
+      <input
+        type="file"
+        class="form-control"
+        id="inputGroupFotoDocumentoRev"
+        aria-describedby="inputGroupFotoDocumentoRev"
+        aria-label="Upload"
+        accept=".png, .PNG"
+        required
+      />
+      <button
+        class="btn btn-outline-secondary"
+        type="button"
+        id="inputGroupFotoDocumentoRev"
+      >
+        Subir
+      </button>
+    </div>
+  </div>
+  <br />
+  <div class="col-md-12">
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <button type="submit" class="btn btn-primary">
+        Siguiente
+      </button>
+      <button
+        type="button"
+        class="btn btn-danger"
+        [awGoToStep]="{ stepIndex: 2 }"
+      >
+        Cancelar
+      </button>
+    </div>
+  </nav>
+</div>
+</form>
